@@ -18,9 +18,9 @@
 		<!-- /post title -->
 
 		<!-- post details -->
-		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-		<span class="author"><?php _e( 'Published by', THEME_OPT ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', THEME_OPT ), __( '1 Comment', THEME_OPT ), __( '% Comments', THEME_OPT )); ?></span>
+		<span class="date"><?php the_time('F j, Y'); ?> <?php //the_time('g:i a'); ?></span>
+<!--		<span class="author">--><?php //_e( 'Published by', THEME_OPT ); ?><!-- --><?php //the_author_posts_link(); ?><!--</span>-->
+<!--		<span class="comments">--><?php //if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', THEME_OPT ), __( '1 Comment', THEME_OPT ), __( '% Comments', THEME_OPT )); ?><!--</span>-->
 		<!-- /post details -->
 
 		<?php lwp_excerpt('lwp_index'); // Build your custom callback length in functions.php ?>
@@ -36,7 +36,7 @@
 
 	<!-- article -->
 	<article>
-		<h2><?php _e( 'Извините, ничего нет.', THEME_OPT ); ?></h2>
+		<h2><?php _e( 'Sorry, nothing to display.', THEME_OPT ); ?></h2>
 	</article>
 	<!-- /article -->
 

@@ -6,7 +6,7 @@ get_header();
 global $mytheme;
 ?>
 <main role="main">
-<div class="contact-wrap">
+<div class="container">
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
        <div class="contact-content">

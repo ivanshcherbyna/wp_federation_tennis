@@ -646,6 +646,23 @@ iframe {
 	margin: 20px;
 }
 /* --POST PAGE --*/
-.thumb-post{
-	width: 100%;
+/*-- Tournament --*/
+.current-post-tournament {
+	border: 1px solid #FFF;
+	border-radius: 14px;
+	padding: 15px;
+	height: 300px;
+	margin: 20px;
+}
+.head-post {
+	color: #FFF;
+	text-shadow: #000 10px 15px 5px;
+}
+.head-post:hover {
+	color: #2627b7;
+	text-shadow: #FFF 5px 10px 2px;
+	transition: 1s all;
+}
+a.link-post {
+	text-decoration: none;
 }

@@ -21,12 +21,12 @@ function get_news()
         $str = strpos($post->post_content, "\n");
         $subtitle = strpos($post->post_content,0,$str);
         $image=get_the_post_thumbnail_url($post,array(500,500));
-               echo '<div class="current-post-tournament col-sm-10">
+               echo '<div class="current-post-tournament col-sm-10" style="background: url('.$image.') center">
                 <a class="link-post" href="'.$post->guid.'">
-                <img class="thumb-post" src="'.$image.'">
+
                 <div class="date-post">'.the_date().'</div>
                 
-                <div class="head-post">'.$post->post_title.'</div>
+                <h3 class="head-post">'.$post->post_title.'</h3>
                 </a>
                 <div class="chunk-post">'.$subtitle.'</div>
               </div>
@@ -43,31 +43,33 @@ wp_reset_postdata(); // сброс
 <main role="main">
     <!-- section -->
     <section>
-
-        <!-- post title -->
-        <h1>
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-        </h1>
-        <!-- /post title -->
-        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-            <!-- article -->
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-                <?php the_content(); ?>
-
-            </article>
-            <!-- /article -->
-
-        <?php endwhile; ?>
-
-
-        <?php endif; ?>
-
         <div class="container">
-            <div class="row">
-                <?php get_news();?>
-            </div>
+                <!-- post title -->
+
+                <h1>
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                </h1>
+                <!-- /post title -->
+                <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+                    <!-- article -->
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+                        <?php the_content(); ?>
+
+                    </article>
+                    <!-- /article -->
+
+                <?php endwhile; ?>
+
+
+                <?php endif; ?>
+
+                <div class="container">
+                    <div class="row">
+                        <?php get_news();?>
+                    </div>
+                </div>
         </div>
     </section>
     <!-- /section -->
