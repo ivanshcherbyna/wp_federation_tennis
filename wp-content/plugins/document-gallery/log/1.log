@@ -1,4 +1,3 @@
-1524084965,0,"(DG_Logger::purgeExpiredEntries) Beginning scheduled log file purge."
 1524171592,0,"(DG_Logger::purgeExpiredEntries) Beginning scheduled log file purge."
 1524171999,0,"(DG_Thumb::initThumbs) Populating thumbnail cache."
 1524171999,0,"(DocumentGallery::doShortcode) Generation Time: 0.33 s"
@@ -15,3 +14,6 @@
 1524172317,0,"(DocumentGallery::doShortcode) Generation Time: 0.03 s"
 1524685202,0,"(DG_Logger::purgeExpiredEntries) Beginning scheduled log file purge."
 1524685202,0,"(DG_Logger::purgeExpiredEntries) Purging log entries for blog #1."
+1524775649,0,"(DG_Logger::purgeExpiredEntries) Beginning scheduled log file purge."
+1524775649,0,"(DG_Logger::purgeExpiredEntries) Purging log entries for blog #1."
+1524776176,0,"(DG_Logger::purgeExpiredEntries) Beginning scheduled log file purge."
