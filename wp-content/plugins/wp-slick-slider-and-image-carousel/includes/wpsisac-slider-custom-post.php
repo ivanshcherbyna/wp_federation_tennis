@@ -5,9 +5,9 @@ function wpsisac_slider_init() {
     $wpsisac_slider_labels = array(
     'name'                 => _x('Slick Slider', 'wp-slick-slider-and-image-carousel'),
     'singular_name'        => _x('slick slider', 'wp-slick-slider-and-image-carousel'),
-    'add_new'              => _x('Add Slide', 'wp-slick-slider-and-image-carousel'),
-    'add_new_item'         => __('Add New slide', 'wp-slick-slider-and-image-carousel'),
-    'edit_item'            => __('Edit Slick Slider', 'wp-slick-slider-and-image-carousel'),
+    'add_new'              => _x('Добавить Slide', 'wp-slick-slider-and-image-carousel'),
+    'add_new_item'         => __('Добавить новый slide', 'wp-slick-slider-and-image-carousel'),
+    'edit_item'            => __('Редактирование Slick Slider', 'wp-slick-slider-and-image-carousel'),
     'new_item'             => __('New Slick Slider', 'wp-slick-slider-and-image-carousel'),
     'view_item'            => __('View Slick Slider', 'wp-slick-slider-and-image-carousel'),
     'search_items'         => __('Search Slick Slider', 'wp-slick-slider-and-image-carousel'),
@@ -110,14 +110,14 @@ function wpsisac_slider_category_columns($out, $column_name, $theme_id) {
 
 /* Custom meta box for slider link */
 function wpsisac_add_meta_box() {
-		add_meta_box('custom-metabox',__( 'Read More Link', 'wp-slick-slider-and-image-carousel' ),'wpsisac_box_callback','slick_slider');
+		add_meta_box('custom-metabox',__( 'Ссылка на кнопке "Читать еще.."', 'wp-slick-slider-and-image-carousel' ),'wpsisac_box_callback','slick_slider');
 }
 add_action( 'add_meta_boxes', 'wpsisac_add_meta_box' );
 function wpsisac_box_callback( $post ) {
 	wp_nonce_field( 'wpsisac_save_meta_box_data', 'wpsisac_meta_box_nonce' );
 	$value = get_post_meta( $post->ID, 'wpsisac_slide_link', true );
 	echo '<input type="url" id="wpsisac_slide_link" name="wpsisac_slide_link" value="' . esc_attr( $value ) . '" size="25" /><br />';
-	echo 'eg. http://www.google.com';
+	echo 'пример ссылки.. http://www.google.com';
 }
 function wpsisac_save_meta_box_data( $post_id ) {
 	if ( ! isset( $_POST['wpsisac_meta_box_nonce'] ) ) {

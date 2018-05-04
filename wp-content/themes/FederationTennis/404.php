@@ -1,22 +1,28 @@
 <?php get_header(); ?>
 
 	<main role="main">
-		<!-- section -->
-		<section>
+		
+			
+				<!-- section -->
+				<section>
+					<div class="сontainer">
+						<div class="row">
+					<!-- article -->
+					<article id="post-404" class="text-center">
 
-			<!-- article -->
-			<article id="post-404">
+						<h1><?php _e( 'Извините... страница не найдена', THEME_OPT ); ?></h1>
+						<h2>
+							<a href="<?php echo home_url(); ?>"><?php _e( 'Вернуться на главную?', THEME_OPT ); ?></a>
+						</h2>
 
-				<h1><?php _e( 'Page not found', THEME_OPT ); ?></h1>
-				<h2>
-					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', THEME_OPT ); ?></a>
-				</h2>
-
-			</article>
-			<!-- /article -->
-
-		</section>
-		<!-- /section -->
+					</article>
+					<!-- /article -->
+						</div>
+					</div>
+				</section>
+				<!-- /section -->
+			
+		
 	</main>
 
 <?php get_footer(); ?>

@@ -24,16 +24,16 @@
                     <!-- /post title -->
 
                     <!-- post details -->
-                    <span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-                    <span class="author"><?php _e( 'Published by', THEME_OPT ); ?> <?php the_author_posts_link(); ?></span>
-                    <span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', THEME_OPT ), __( '1 Comment', THEME_OPT ), __( '% Comments', THEME_OPT )); ?></span>
+                    <span class="date"><?php the_time('j F, Y'); ?> <?php //the_time('g:i a'); ?></span>
+                    <!-- <span class="author"><?php _e( 'Published by', THEME_OPT ); ?> <?php the_author_posts_link(); ?></span> -->
+                    <!-- <span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', THEME_OPT ), __( '1 Comment', THEME_OPT ), __( '% Comments', THEME_OPT )); ?></span> -->
                     <!-- /post details -->
 
                     <?php the_content(); // Dynamic Content ?>
 
-                    <?php the_tags( __( 'Tags: ', THEME_OPT ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+                    <?php the_tags( __( 'Метки: ', THEME_OPT ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
-                    <p><?php _e( 'Categorised in: ', THEME_OPT ); the_category(', '); // Separated by commas ?></p>
+                    <p><?php _e( 'Категория: ', THEME_OPT ); the_category(', '); // Separated by commas ?></p>
 
                     <?php comments_template(); ?>
 

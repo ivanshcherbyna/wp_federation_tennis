@@ -21,9 +21,9 @@ function get_feed_news()
         $date=substr($post->post_date,0,10);
         $image=get_the_post_thumbnail_url($post->ID,array(100,100));
           echo '<div class="current-post-feed col-sm-6">
-                
-                <img class="thumb-post" src="'.$image.'">
                 <a class="link-post-feed" href="'.$post->guid.'">
+                <img class="thumb-post" src="'.$image.'">
+                
                 <div class="head-post-feed">'.$post->post_title.'</div>
                 </a>
               
